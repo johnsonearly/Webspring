@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+   
+
+<meta name="HandheldFriendly" content="true">
+            <meta charset="utf-8">
+
+            <meta http-equiv="X-UA-Compatible"content="ie=edge">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <!--Start of Tawk.to Script-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!--  -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+<style type="text/css">
+  body{
+    margin: 0;
+    padding:0;
+    font-family: Roboto, sans-serif;
+   background:#22242A;
+  }
+  header{
+    position:fixed;
+    background:#22242A;
+    padding: 20px;
+
+    width:350px;
+    height: 70px;
+  }
+  .left_area h1{
+    color: #fff;
+    margin:0;
+    text-transform: uppercase;
+    font-size:22px;
+    font-weight:900;
+  }
+  .left_area span{
+    color: #1DC4E7;
+  }
+.Logout{
+  text-decoration: none;
+  margin-top:-35px;
+  float:right;
+  margin-right: 40px;
+  border-radius:4px;
+  font-size:15px;
+  color:#fff;
+  font-weight:600;
+  padding:5px;
+  background:#19B3D3;
+}
+.Logout:hover{
+  background:green;
+  transition: 0.5s;
+}
+.sidebar{
+  background:#2F323A;
+  margin-top:70px;
+  left:0;
+  position:fixed;
+  width:350px;
+  height:100%;
+  transition: 0.5s;
+  transition-property: left;
+}
+img{
+  width:200px;
+  height:200px;
+  margin-bottom: 10px;
+  border-radius: 100px;
+}
+.sidebar h4{
+
+    color:#ccc;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.sidebar a{
+  color:#fff;
+  line-height:40px;
+  display: block;
+  width:300px;
+  padding-left: 40px;
+  text-decoration: none;
+  transition-property: background;
+}
+.sidebar a:hover{
+    background:#19B3D3;
+}
+.sidebar i{
+  padding-right: 10px;
+}
+ .sidebar_btn i {
+
+         color:#fff;
+         cursor:pointer;
+         position:fixed;
+         left:300px;
+         font-size:20px;
+         z-index:1;
+        transition: 0.5s;
+        transition-property: color;
+
+}
+
+ .sidebar_btn:hover{
+   color:#19B3D3;
+
+}
+
+#check:checked ~ .sidebar{
+       left: -280px;
+
+
+}
+#check:checked ~ .sidebar a span{
+
+   display:none;
+
+}
+.h2{
+  font-size:30px;
+  padding:290px;
+}
+h2{
+    animation: type 5s steps(22);
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: Roboto;
+    border-right: 4px solid white;
+    width: 20ch;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:80px;
+
+}
+@keyframes type{
+                  0%{
+                         width: 0ch;
+                  }
+                  40%{
+                  width: 10ch;
+                }
+                80%{
+                  width: 18ch;
+                }
+                100%{
+                  width: 20ch
+                }
+
+
+
+
+}
+#check:checked ~ .sidebar a{
+            font-size:20px;
+            margin-left: 250px;
+            width: 80px;
+
+}
+.content{
+           width: 100%;
+          margin-left:300px;
+          background-image: url("plant.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          transition: 0.5s;
+          height:100%;
+          overflow: hidden;
+}
+#check:checked ~ .content{
+  margin-left: 60px;
+}
+#check{
+  display: none;
+}
+.loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width:1500px;
+            height: 100vh;
+            z-index: 9999;
+            background-color: white;
+        }
+        .loader img{
+            position: relative;
+            left: 40%;
+            top: 40%;
+        }
+
+</style>
+<body>
+     <script>
+    window.onload = function() 
+    {
+        //display loader on page load 
+        $('.loader').fadeOut();
+    }
+
+</script>
+  <div class="loader" ><img src="cool.gif"></div>
+  <input type="checkbox" id="check">
+ <!-- header sarts -->
+<header>
+  <label for="check" class="sidebar_btn">
+   <i class="fa fa-bars" aria-hidden="true"></i>
+  </label>
+<div class="left_area">
+
+<h1>In<span>spire</span></h1>
+
+
+</div>
+
+</header>
+ <!-- header end -->
+
+ <!-- sidebar meu starts -->
+ <div class="sidebar">
+ <center>
+   <img src="align.jpg" class="profile" alt="Inspire">
+   <h4>Inspire</h4>
+
+ </center>
+<a href="form.html"><i class="fa fa-desktop" aria-hidden="true"></i><span>Dashboard</span></a>
+  <a href="video.html"><i class="fa fa-play" aria-hidden="true"></i><span>Videos</span></a>
+ <a href="music.html"><i class="fa fa-music" aria-hidden="true"></i><span> Music</span></a>
+  <a href="article.html"><i class="fa fa-cogs" aria-hidden="true"></i><span> Articles</span></a>
+  <a href="challenge.html"><i class="fa fa-trophy" aria-hidden="true"></i><span>Challenges</span></a>
+    
+    
+  <a href="http://hexgl.bkcore.com/play/"><i class="fa fa-cube" aria-hidden="true"></i><span>Games</span></a>
+  <a href="index.html"><i class="far fa-info-circle"></i><span>Logout</span></a>
+</div>
+
+<!-- side bar menu ends -->
+<div class="content">
+  <div class="h2">
+  <h2>Inspire</h2></div>
+</div>
+
+<script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/e38bf697fdfad4db970f0ff2e13106045fde0252ced5b4204c9d1f460ba829f3.js"></script>
+
+</body>
+</html>

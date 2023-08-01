@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Article</title>
+</head>
+    
+
+
+<meta name="HandheldFriendly" content="true">
+  
+            <meta charset="utf-8">
+
+            <meta http-equiv="X-UA-Compatible"content="ie=edge">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <!--Start of Tawk.to Script-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!--  -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+<style type="text/css">
+  body{
+    margin: 0;
+    padding:0;
+    font-family: Roboto, sans-serif;
+   background:#22242A;
+  }
+  header{
+    position:fixed;
+    background:#22242A;
+    padding: 20px;
+
+    width:350px;
+    height: 70px;
+  }
+  .left_area h1{
+    color: #fff;
+    margin:0;
+    text-transform: uppercase;
+    font-size:22px;
+    font-weight:900;
+  }
+  .left_area span{
+    color: #1DC4E7;
+  }
+.Logout{
+  text-decoration: none;
+  margin-top:-35px;
+  float:right;
+  margin-right: 40px;
+  border-radius:4px;
+  font-size:15px;
+  color:#fff;
+  font-weight:600;
+  padding:5px;
+  background:#19B3D3;
+}
+.Logout:hover{
+  background:green;
+  transition: 0.5s;
+}
+.sidebar{
+  background:#2F323A;
+  margin-top:70px;
+  left:0;
+  position:fixed;
+  width:350px;
+  height:100%;
+  transition: 0.5s;
+  transition-property: left;
+}
+img.profile{
+  width:200px;
+  height:200px;
+  margin-bottom: 10px;
+  border-radius: 100px;
+}
+.sidebar h4{
+
+    color:#ccc;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.sidebar a{
+  color:#fff;
+  line-height:40px;
+  display: block;
+  width:300px;
+  padding-left: 40px;
+  text-decoration: none;
+  transition-property: background;
+}
+.sidebar a:hover{
+    background:#19B3D3;
+}
+.sidebar i{
+  padding-right: 10px;
+}
+ .sidebar_btn i {
+
+         color:#fff;
+         cursor:pointer;
+         position:fixed;
+         left:300px;
+         font-size:20px;
+         z-index:1;
+        transition: 0.5s;
+        transition-property: color;
+
+}
+
+ .sidebar_btn:hover{
+   color:#19B3D3;
+
+}
+
+#check:checked ~ .sidebar{
+       left: -280px;
+
+
+}
+#check:checked ~ .sidebar a span{
+
+   display:none;
+
+}
+h2{
+  font-size:50px;
+  font-weight: 500;
+  font-style:sans-serif;
+  font-family: lato;
+  padding: 40px;
+  text-align: center;
+color:black;
+}
+p{
+ 
+  
+}
+.chin{
+   font-size:20px;
+ 
+  font-style:sans-serif;
+  font-family: Bell MT;
+  padding: 90px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+
+
+}
+button{
+  color: white;
+  background-color:
+   color: #19B3D3;
+}
+
+#check:checked ~ .sidebar a{
+            font-size:20px;
+            margin-left: 250px;
+            width: 80px;
+
+}
+.content{
+           width: 100%;
+          margin-left:300px;
+        background-color: white;
+        color: black;
+       background-size: cover;
+          transition: 0.5s;
+          height:100%;
+          overflow: hidden;
+}
+#check:checked ~ .content{
+  margin-left: 60px;
+}
+#check{
+  display: none;
+}
+.loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width:1500px;
+            height: 100vh;
+            z-index: 9999;
+            background-color: white;
+        }
+        .loader img{
+            position: relative;
+            left: 40%;
+            top: 40%;
+        }
+        img.p{
+                 height: 800px;
+                 width: 100%;
+                 background-size: cover;
+                 float: center;
+                 justify-content: center;
+
+
+
+        }
+.chin nav{
+font-size: 28px;
+
+  justify-content: center;
+  color:black;
+  background-color: #11a;
+  padding:30px;
+  text-align: center;
+  height:30px;
+  width: 200px;
+  border-radius: 20px;
+  font-weight: 500;
+  float:center;
+  position: center; 
+}
+</style>
+<body>
+     <script>
+    window.onload = function() 
+    {
+        //display loader on page load 
+        $('.loader').fadeOut();
+    }
+
+</script>
+  <div class="loader" ><img src="cool.gif"></div>
+  <input type="checkbox" id="check">
+ <!-- header sarts -->
+<header>
+ 
+<div class="left_area">
+ <label for="check" class="sidebar_btn">
+   <i class="fa fa-bars" aria-hidden="true"></i>
+  </label>
+<h1>In<span>spire</span></h1>
+
+</div>
+
+</header>
+ <!-- header end -->
+
+ <!-- sidebar meu starts -->
+ <div class="sidebar">
+ <center>
+   <img src="align.jpg" class="profile" alt="Inspire">
+   <h4>Inspire</h4>
+
+ </center>
+<a href="form.html"><i class="fa fa-desktop" aria-hidden="true"></i><span>Dashboard</span></a>
+  <a href="#"><i class="fa fa-play" aria-hidden="true"></i><span>Videos</span></a>
+ <a href="music.html"><i class="fa fa-music" aria-hidden="true"></i><span> Music</span></a>
+  <a href="article.html"><i class="fa fa-cogs" aria-hidden="true"></i><span> Articles</span></a>
+  <a href="challenge.html"><i class="fa fa-trophy" aria-hidden="true"></i><span>Challenges</span></a>
+    
+
+  <a href="http://hexgl.bkcore.com/play/"><i class="fa fa-cube" aria-hidden="true"></i><span>Games</span></a>
+  <a href="index.html"><i class="far fa-info-circle"></i><span>Logout</span></a>
+</div>
+
+<!-- side bar menu ends -->
+<div class="content">
+  <div class="h2"><h2>
+  Finding your purpose</h2></div><hr>
+  <img src="purpose.jpg" class="p">
+  <p class="chin">
+  
+Do you know what is driving you? Why are you working so hard and doing so much to get what you want? Do you know your purpose for being here?
+
+Whatever your dreams may be and whatever you want to achieve, it is important to analyse the reasons for those things. The reasons for what you want to have and to achieve are your “why.” Your why is intimately tied to your purpose in life.
+
+Finding your purpose – the reasons for achievement
+
+It seems strange that most of the time we wonder through life without any real purpose of our own. At times we do achieve great things and have the appearance of having a wonderful life. We may even have every material thing we could ever want and be successful at our careers, businesses and every thing else. But, as many who have achieved success will tell you, you can still feel empty inside and your life can still lack real meaning.
+
+Imagine, for a moment, that you have achieved your dreams. You are famous. So what? You have lots of luxury cars. So what? You are number one in your area of expertise. So what? You have the biggest or best company in the country. So what? You are wealthy beyond your wildest dreams. So what?
+
+Achievement, wealth and recognition in themselves are useless if they do not answer the “why” question. Why? Because the reason for doing something is ultimately more important than what is done.
+
+Finding your purpose – everything has a purpose in life
+
+Everything has a purpose in life. The trees, ants, bees, birds and every living thing have a purpose for being. Each plays its own little part in the delicate architecture of life. Every good invention or good tool answers a question. Technology answers the why question – it’s an answer to someone’s problem.
+
+Human beings, whatever you believe their origin to be, are the greatest of all of nature’s wonders. Why are most of them so purposeless in their existence? The Roman emperor and philosopher Marcus Aurelius asks: “Everything, a horse, a vine, is created for some duty...For what task, then, were you yourself created?”
+
+A substantial number of us exist simply to exist. We live year in and year out as though living itself is our ultimate goal. If we make enough money and have enough things to get us through to the next year we are satisfied. Surely, there is more to our lives than that? How can something so wonderfully made and endowed with potential as you are simply be here to just exist? What is your contribution to the world? Is your being here making any difference to anyone?
+
+Finding your purpose – the why factor
+
+The answer to these questions lies partly in your why. Your why is the strong reason you desire something. It is not what you desire, but the strong reason why you desire it. If you examine it further you will find that your why is closely tied to your purpose in life: the thing that you are here to do.
+
+So who determines your why and your purpose? Very simply – you do. George Bernard Shaw said “This is the true joy in life, the being used for a purpose recognized by yourself as a mighty one.” Trouble is, if you are anything like most people you are probably waiting for some miraculous experience that will tell you why you are here and what you must do. Such moments do occur for some people, but they are the exception and not the rule. The fact is, most people already have the starting point for knowing their purpose in life.
+
+It may be something that interests you, excites you, inspires you, or just that small voice in the back of your head that tells you you ought to be doing something. These are often the clues that hold the answer to finding your purpose. Unfortunately, they are often the clues we tend to ignore or suppress. Yes, they may not be complete clues. Certain pieces of the puzzle may be missing. But these pieces can only be found once we decide to set off on the journey.
+
+Finding your purpose – decision is always the starting point
+
+What is the starting point of that journey? As with most things in life, it is decision. Decide that there is purpose to your life. Then decide to commit yourself to finding your purpose. Without these two decisions being settled in your mind you will wonder through life like 97% of everybody else out there: busy achieving nothing.
+
+Deciding to find your purpose will set you on the right track and make your mind receptive and ready to see every day things in a new light. However, you have to seek out the answers. Read books that make you think, watch inspiring movies, spend time with the right people, develop your interests and passions and, most importantly, read your Bible. All this is part of keeping your mind in the right environment, an environment that is right for revelation and inspiration.
+
+Finding your purpse - simplicity is often the answer
+
+There is no way in the world anyone can do what I have just described to you and end up living a meaningless life. One piece at a time the puzzle will become clear and complete. You will discover your purpose, and when you do, it will likely not be some experience where you got hit on the head and nearly knocked out by the revelation. It will come naturally. It will be something that combines most of your life’s experiences and your abilities into one perfect purpose. It will be something you probably had a clue about all along.
+
+However, don’t ever make the mistake of wanting to know everything before you start anything. Start where you are with what you have and what you know. Would you dare write a novel without first learning the alphabet? Take the first steps and you will be on your way. If you follow the process you will mature into the person you are meant to be. You will fulfill your purpose, one little step and one little piece at a time.
+
+Finding your purpose – conclusion
+
+Leo Buscaglia stated that “It's not enough to have lived. We should be determined to live for something. May I suggest that it be creating joy for others, sharing what we have for the betterment of (man)kind, bringing hope to the lost and love to the lonely.”
+
+You are all you can be. Go on and be it.
+<br><br>
+<strong>-Johnson.E</strong> </p>
+<h2>Overcoming Negativity</h2><hr>
+<img src="sad.jpg" class="p">
+<p class="chin">
+Are you discouraged whenever you come across a little opposition and resistance? Do you fail to achieve your dreams because you always expect and want it to be easy to do so?
+
+Whatever you want to achieve in life, it is very likely that you will run into some resistance. This resistance may come in various forms and at times from unexpected or unusual places.<br>
+
+<strong>Overcoming negativity – the laws of nature</strong>
+
+It is a natural thing in nature that for every action there is an opposing and equal reaction. If you want to move, you must overcome friction and gravity. This may not seem to be a good state of affairs, until you realise that it is actually the opposition of gravity and friction that strengthens you. In order for you to walk and jump, your muscles have to develop the strength to overcome gravity and friction.
+
+The experience of astronauts shows that when they go to outer space where there is less gravity and friction, their muscles and bones actually become weaker, to an extent where some fail to walk for some time on their return to earth. Without the opposition of gravity and friction their bones and muscles deteriorate.<br>
+
+<strong>Overcoming negativity – personal challenges</strong>
+
+Just a few days ago, I came across some resistance myself. I got an anonymous message posted from the comment page on my website. Usually these messages are from people that have found my articles and website interesting and helpful and they encourage me greatly to keep writing and telling people that they can achieve their dreams. However, this message was different. The unknown person accused me of stealing their work word for word in my articles.
+
+I was shocked, to say the least. More surprising was the fact that he went on to threaten to “notify the Post and even take a large ad in the Times and Daily to expose” me. I read the message again just to be sure I was reading it correctly. I was.
+
+What I felt at the time was a little disappointment and then amusement. This soon turned to utter disbelief when a few minutes later the anonymous writer sent an email declaring his identity and formally accusing me that “most of the articles that you have written for the Post contain my original work and writing.” It was from someone I truly respect and admire, and someone I aspired to work very closely with in future in order to make a positive difference to the lives of many people in this country.<br>
+
+<strong>Overcoming negativity – the resolve to overcome</strong>
+
+However, my disappointment, disbelief and amusement soon turned into a burning resolve not only to continue doing what I am doing, but to do it even better. In addition to that I was inspired to do a lot more than I am currently. That resistance and opposition is perhaps the very thing I needed to strengthen myself and develop myself further. I refuse to wallow in fear and let anything like that hinder me. This will not be the stone that will crush me, but the stepping stone to greater things!
+
+I subscribe to Stephen R. Covey’s philosophy that “Opposition is a natural part of life. Just as we develop our physical muscles through overcoming opposition - such as lifting weights - we develop our character muscles by overcoming challenges and adversity.”<br>
+
+<strong>Overcoming negativity – welcome challenges
+</strong>
+So, if you are not being challenged in any way, you cannot grow. If you do not have anything to push against, you cannot make any progress. This is a revealing but true concept. If you are absolutely satisfied with your life the truth remains that you will not try to change it in any way. Any positive change must come as a result of some negative influence that forces you to change.
+
+This negative influence can take many forms - from dissatisfaction with your work to disappointment from your girlfriend or boyfriend. There are many geniuses out there who found their passion and did amazing things after some tragic event in their lives or after being disappointed in one way or another.<br>
+
+<strong>Overcoming negativity – be prepared for it<strong>
+
+As a dreamer, you must always be prepared for opposition. In particular, you must be prepared for the nay-sayers and the haters. These are the people that would love to see you fail and they know that you will fail in trying to live the life that you deserve. At times it may be people you truly trust to help you along on your journey. Instead they try to stop you and discourage you. Spouses, relatives and close friends are some examples. My anonymous e-mailer is another.
+
+This is a facet of human nature that is hard to understand. Why would anyone want to stop someone else from being all that they can be? The answer is simple. That would expose their own failures and shortcomings. It is not that they don’t believe in you – they just don’t have enough belief in themselves. They would judge you based on their own abilities. But rather than get discouraged and defeated you can use their unbelief to spur you on. I have found that there is nothing that can encourage you to take action more than having someone show doubt in what you can do.<br>
+
+<strong>Overcoming negativity – looking forward</strong>
+
+One of my favourite motivational speakers, Jim Rohn, tells a story of how his former boss did not believe in his abilities and thought he was a failure. When Jim became wealthy from his speaking business he took a briefcase full of dollar bills, got into his former boss’s office, opened the briefcase, poured all the dollar bills on the desk in front of where the guy was seated and exclaimed just two words before walking out – “count it!”
+
+As Lee Iacocca said: “In times of great stress or adversity it's always best to keep busy, to plow your anger and your energy into something positive.” What Jim Rohn did is a good example of that principle at work. I would urge you right now to write a list of things people in the past have said you can’t do. I would urge you also to plan your victory celebration – what are you going to do once you get there? What are you going to do to help elevate those who will be in the position you may be in now?<br>
+
+<strong>Overcoming negativity – conclusion</strong>
+
+The Bible says in Genesis as Joseph addressed his brothers: “But as for you, ye thought evil against me; but God meant it unto good…” Turn the negativity into a positive. Overcome the opposition and prove them wrong.
+
+You are all you can be. Go on and be it.
+<br><br>
+<strong>-Johnson.E</strong>
+
+</p>
+ <h2>Keep your eyes on the prize</h2><hr>
+ <img src="high.jpg" class="p">
+ <p class="chin">
+  While playing sports in high school, I was often told by my coaches to keep your eyes on the prize. The prize being to win.
+
+
+ 
+After high school lots of things change. What we think of as winning changes as do the prizes we want. But the basic principles of how to win stay the same.
+Your prize may change from winning a sports game to:
+
+Graduating college
+Losing 10 pounds
+Eating healthier
+Exercising more
+Getting a promotion
+Buying your first home...
+There will always be things we want in life. Some are just a passing whim, others are real desires or prizes. When you come across one of those prizes, don't let it slip away. Keep it in focus. Remembering what you want and why, so you can continue to move toward it step by step.
+
+That is the essence of keeping your eyes on the prize. If there is something you really want, keep it in your thoughts. We often come up with great goals when feeling optimistic and strong, but then as life moves on, we get caught up in our routines and schedules. Suddenly a strong want or goal slips away.
+
+The tips below are designed to help keep your goals in front of you. If you see your goals on a regular basis, you are more likely to be motivated to work on them. As you consistently work on them, you will be moving closer and closer to accomplishment.
+<br>
+People often say that motivation doesn't last.
+Well, neither does bathing,
+that's why we recommend it daily.
+-Zig Ziglar
+<br>
+Here are 5 tips to keep your eyes on the prize
+<br>
+
+<b>1. Use your Computer.</b>
+Set your desktop background with a picture that represents your goal. You can also add some text as a reminder or motivator.
+<br>
+2. Print them up.
+Print your goals and post them in important places that you're likely to see. Some great places to use are - the fridge, bathroom mirror, and by the alarm clock.
+<br>
+<b>3. Wallet sized card.</b>
+Create a wallet sized card with your goals printed on it. Keep this with you all the time. Put it in your wallet, pocket, or purse near something you use daily, perhaps your atm or credit card. This way every time you use your atm card, you'll also see your goals.
+<br>
+<b>4. use a dry erase board.</b>
+A dry erase board is an excellent tool. You can write your goals and add an inspirational quote.
+<br>
+<b>5.Twice a day.<b>
+Commit to reading your goals twice a day. Once in the morning and again when going to sleep.
+
+Remember to keep it simple. Using the above tips should be an easy part of your routine. Pick one and give it a try.
+
+Keeping your goals in front of you on a regular basis will refresh your positive mind set. you may still hit a rough patch at times, but that's normal. Setting up reminders are like having a personal cheering section. They are there to support you and remind you of how you felt when you first chose the goal - inspired, strong, and optimistic.
+<br>
+Good luck with your goals.
+<br><br>
+<b>-Johnson.E</b>
+<h2>Future In My Control</h2><hr>
+<img src="future.jpg" class="p">
+<p class="chin">
+The past is a firm attachment we find difficult to cut off.But the problem is that most people let their past hold their present and the future which coulde be one's greatest regrets in life when they realize the opportunities they missed. It may lead to the greatest depression and pain. 
+<br>
+But my point isn't for you to lay low but for you to know."OPPORTUNITIES NEVER DIE" George Washington  Caever, An agricultral scientist discovered over three hundred uses of a peanut. He didn't stop at hundred"altgough this is a lot" but created more opportunities for himself. At times you do things and feel that  extreme anyone could go but trust me its the devil speaking.
+<br>
+If you read motivational stories you should agree that what motivates you the most are little past and big future "because that is what most of us can relate to. Your past doesn't matter anymore even the present but your future ."Your present makes your future" so it does amatter.
+<br>
+You keep lot of critics as friends? The #1 destiny killer. They always criticize  whatever you think which repels you from even trying. You only fail when you don't try . The best friends  to have are optimistic friends who see all your ideas  without sceptism.
+<br><br>
+<b>Famuyiwa Dotun</b>
+<h2>Back To School   </h2>
+<img src="school.jpg"class="p">
+<p class="chin">
+As the new school year begins the most common problem that teachers and parents face is lack of student motivation. Motivation can either come from within the student (intrinsic) or from outside (extrinsic). A child who is intrinsically motivated performs a task because of the joy that comes from learning new materials. A child who performs in school to gain parent approval, grades, or rewards is externally motivated. While research shows that those children with internal motivation may achieve greater success, teachers and parents often find that many children seek external reinforcers. Parents who ask questions that lead to more questions for a child are more successful in developing intrinsic motivation. For example, a parent that gives a child a special toy as a "reward" for reading a lesson about how an airplane works and for completing the related homework that requires answers to questions about the parts of an airplane will stimulate less motivation than the parent who helps a child discover how planes work by building a balsam plane and letting the child practice flying it. This parent can ask what changes the plane’s flight pattern. The child can then experiment, discover and generate new questions and new discoveries.
+<br>
+Motivation, as parents and teachers know, often varies depending on the setting, the people involved, the task and the situation. A child with a learning disability may be a very reluctant reader who resists reading a science assignment or writing the homework assignment but eagerly absorb all the teacher shows about vaporization of water in a science class. The key for each learner is to find that which motivates.
+
+Unfortunately, other factors often intervene to lessen a student’s motivation. Some of these factors are:
+<br>
+Fear of failure
+<br>
+Children can be afraid to complete work because they are afraid to make mistakes. They do not want to look foolish in front of their peers, teachers, siblings, or parents. A child with a learning disability might, for example, constantly distract the class with wonderful humor, but never complete an assignment or answer a question in class. The humor covers his reading difficulty and is a cover-up for his inability to complete his work as well as most of the students in the class.
+<br>
+Lack of challenge
+<br>
+Children can be bored with schoolwork. This may be for good reason. A gifted student may be "unmotivated" in a class that repeatedly explains a concept s/he already understands. A child with a learning disability may be bored if the material available to study a concept is written far below the child's cognitive ability. The child with LD may also be unmotivated if it is apparent that the teacher attributes a lack of potential success to the child based on the label of LD. If the teacher, in this case, does not challenge the student, the student may discern the teacher's apparent assessment of ability and simply not demand more stimulating content.
+<br>
+Lack of meaning
+<br>
+A student may simply believe that the schoolwork is not important because s/he cannot see how it relates to everyday life. This can be especially troubling for a student with LD. A student with a visual-motor problem, for example, may find it very difficult to organize math problems in order to assure the correct answer. The student always gets the problem wrong because the columns of a long addition problem get mixed up. That student knows the calculator can do the problem correctly in a second. The student is likely to see no meaning to a class on addition, division, or any other math concept.
+<br>
+Emotional problems
+<br>
+A child with an emotional problem may have difficulty learning because s/he cannot focus in class. Anxiety, fear, depression or perhaps problems related to home could interfere. Children with LD often have emotions related to the frustration of the learning disability or other related emotional patterns that limit motivation for schoolwork.
+<br>
+Anger
+<br>
+Some children use schoolwork, or lack of schoolwork, as an expression of anger towards the parents. This is often called a passive-aggressive approach. For example, if a child feels intense pressure to succeed academically, a factor the student cannot control, the student may yell or argue with the parent. Rather, low grades are earned. This is something within the student's range of control. The more the parent tries to control and structure reinforcers, the lower the grades fall.
+<br>
+Desire for attention
+<br>
+Unfortunately some children use lack of academic success as a way of getting parent or teacher attention. Too often in today's rapid paced world parents may not give children who are doing well the attention they need. Children that come home, do their chores, complete their homework, and achieve academically can be ignored simply because they are not causing problems. Children who act out or who seem "helpless" with schoolwork often can gain support and attention. Attention for children is a powerful motivator. It is important to periodically review what types of behavior earn a child attention at home or at school.
+<br>
+Children with LD can find learning a difficult and painful process. Students with LD and/or ADHD are often frustrated in learning situations. Memory problems, difficulties in following directions, trouble with the visual or auditory perception of information, and an inability to perform paper-and-pencil tasks (i.e., writing compositions, notetaking, doing written homework, taking tests) and other problems can make learning a truly "unmotivating" chore. Children with LD and/or ADHD also often think their lack of school success is not worth the effort. Since their grades often seem lower than those earned by other children they may not see a relationship between effort expended in school and academic success. Thus, to motivate them to achieve academically can be especially challenging.
+  </p>
+
+</p>
+</div>
+
+<script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/e38bf697fdfad4db970f0ff2e13106045fde0252ced5b4204c9d1f460ba829f3.js"></script>
+</body>
+</html>
